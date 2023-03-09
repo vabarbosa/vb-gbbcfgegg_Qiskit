@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 #our qbits are (0,0)
 qc_cnot = QuantumCircuit(2)  # create a qcircuit with 2 qbits
 
-#perform a CNOT: flip both qbits if the target qbits is 1 (the first qbit: the qbit at index 0; the second qbit: the qbit at index 1)
-qc_cnot.cx(0,1)  # the 0 and 1 in the parentheses are the index of the quantum qbits
+#perform a CNOT: flip both qbits if the control qbit is 1 (the first qbit: the qbit at index 0; the second qbit: the qbit at index 1)
+qc_cnot.cx(0,1)
 qc_cnot.draw()
 circuit_drawer(qc_cnot, initial_state=True, output='mpl').savefig('./pics/bm_adding_with_qiskit.png')
 
